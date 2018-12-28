@@ -10,8 +10,6 @@
 	margin: auto;
 	width: 1050px;
 	text-align: center;
-	font-size: 35px;
-	margin-bottom: 30px;
 }
 
 #sliderContent
@@ -21,30 +19,18 @@
 	float:left
 }
 
-#prevSlide
 {
 	width: 40px;
 	height: 70px;
-	margin-top: 25px;
-}
-
-#nextSlide
-{
-	width: 40px;
-	height: 70px;
-	margin-top: 25px;
 }
 
 .image-slide
 {
-  	background-color: pink;
 	border-radius: 1%;
 	width: 208.5px;
 	height: 106px;
-	border: 1px solid;
    	line-height: 106px;
   	margin-right: 10px;
-	margin-left: 10px;
 	padding: 6px;
 	text-align: center;
 	float:left;
@@ -57,7 +43,6 @@
   	vertical-align: middle;
 	max-width: 208.5px;
 }
-
 
 .image-slide:hover
 {
