@@ -3,6 +3,7 @@
 	width:1050px;
 	height: 120px;
 	margin: auto;
+    color: #578105;
 }
 
 #naglowek
@@ -10,6 +11,7 @@
 	margin: auto;
 	width: 1050px;
 	text-align: center;
+	font-size: 20px;
 }
 
 #sliderContent
@@ -19,17 +21,22 @@
 	float:left
 }
 
+#prevSlide, #nextSlide
 {
 	width: 40px;
 	height: 70px;
+  	font-size:35px;
 }
 
 .image-slide
 {
+  	background-color: white;
 	border-radius: 1%;
 	width: 208.5px;
 	height: 106px;
+  	border: 1px solid;
    	line-height: 106px;
+   	margin-left: 10px;
   	margin-right: 10px;
 	padding: 6px;
 	text-align: center;
