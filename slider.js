@@ -4,12 +4,11 @@ $(document).ready(function(){
 	var i=1;
 	var j=2;
 	var k=3;
-	var l=4;
+    var l=4;
+	
 	var countIMG = 8;
 	var stop = false;
 
-
-	
 	var adres = [];
 	adres[0] = "http://www.piwet.pulawy.pl/";
 	adres[1] = "https://www.gov.pl/web/rolnictwo/";
@@ -18,19 +17,17 @@ $(document).ready(function(){
 	adres[4] = "https://www.gif.gov.pl/";
 	adres[5] = "http://www.vetpol.org.pl/";
 	adres[6] = "http://urpl.gov.pl/pl";
-	adres[7] = "http://google.pl";
-	
-	
+    adres[7] = "http://dziennikustaw.gov.pl/"
+
 	document.getElementById("nextSlide").addEventListener("click", nextSlide);
 	document.getElementById("nextSlide").addEventListener("click", stopAutoplay);
 	document.getElementById("prevSlide").addEventListener("click", prevSlide);
 	document.getElementById("prevSlide").addEventListener("click", stopAutoplay);
-	
+    
+    
 	function nextSlide(){
 		$("#firstslide").fadeOut(700);
-		$("#secondslide").fadeOut(500);
-		$("#thirdslide").fadeOut(300);
-		$("#foruthslide").fadeOut(100);
+
 		
 		setTimeout(function(){
 		i++;
@@ -65,21 +62,18 @@ $(document).ready(function(){
 		
 		const adres4 = document.querySelector('.adres4');
 		adres4.href = adres[l-1];
-				
-		$("#firstslide").fadeIn(700);
-		$("#secondslide").fadeIn(500);
-		$("#thirdslide").fadeIn(300);
-		$("#fourthslide").fadeIn(100);
+        
 		}, 800);
 
 	}
 	
 	function prevSlide(){
+    
+
 		i--;
 		j--;
 		k--;
 		l--;
-		if(i<1)	i=countIMG;
 		if(j<1)  	j=countIMG;
 		if(k<1) 	k=countIMG;	
 		if(l<1) 	l=countIMG;	
@@ -107,6 +101,9 @@ $(document).ready(function(){
 		
 		const adres4 = document.querySelector('.adres4');
 		adres4.href = adres[l-1];
+        
+        
+
 
 	}
 	
@@ -122,10 +119,9 @@ $(document).ready(function(){
 			setTimeout(autoplay, 4000);
 		}
 	}
-	
-	window.onload=function(){
+    
+    
 		autoplay();
 	}
-
 });
 
