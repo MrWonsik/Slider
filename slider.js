@@ -1,6 +1,6 @@
 $(document).ready(function(){
-
-
+	if(document.getElementById("nextSlide")!=null)
+    {
 	var i=1;
 	var j=2;
 	var k=3;
@@ -27,6 +27,9 @@ $(document).ready(function(){
     
 	function nextSlide(){
 		$("#firstslide").fadeOut(700);
+		$("#secondslide").fadeOut(550);
+		$("#thirdslide").fadeOut(350);
+        $("#fourthslide").fadeOut(250);
 
 		
 		setTimeout(function(){
@@ -63,21 +66,32 @@ $(document).ready(function(){
 		const adres4 = document.querySelector('.adres4');
 		adres4.href = adres[l-1];
         
+        $("#firstslide").fadeIn(750);
+		$("#secondslide").fadeIn(550);
+		$("#thirdslide").fadeIn(350);
+        $("#fourthslide").fadeIn(250);
 		}, 800);
+		
 
 	}
 	
 	function prevSlide(){
     
+		$("#firstslide").fadeOut(700);
+		$("#secondslide").fadeOut(550);
+		$("#thirdslide").fadeOut(350);
+        $("#fourthslide").fadeOut(250);
 
 		i--;
 		j--;
 		k--;
 		l--;
+		if(i<1)		i=countIMG;
 		if(j<1)  	j=countIMG;
 		if(k<1) 	k=countIMG;	
 		if(l<1) 	l=countIMG;	
 		
+		setTimeout(function(){
 		const img1 = document.querySelector('.img1');
 		img1.src = 'img/'+i+'.png';
 		
@@ -102,6 +116,11 @@ $(document).ready(function(){
 		const adres4 = document.querySelector('.adres4');
 		adres4.href = adres[l-1];
         
+        $("#firstslide").fadeIn(250);
+		$("#secondslide").fadeIn(350);
+		$("#thirdslide").fadeIn(550);
+        $("#fourthslide").fadeIn(750);
+        }, 800);
         
 
 
@@ -121,7 +140,9 @@ $(document).ready(function(){
 	}
     
     
+    window.onload=function(){
 		autoplay();
 	}
+    }
 });
 
